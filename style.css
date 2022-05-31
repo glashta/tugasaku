@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+
+:root {
+  --margin-size: 0rem 5rem 0rem 5rem;
+  --color-underline: rgba(0,0,0, 0.5);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: linear-gradient(38deg, rgba(110,110,110,0.7) 0%, rgba(39,40,40,0.7) 52%, rgba(124,140,143,0.7) 100%), url("https://images8.alphacoders.com/416/416395.jpg");
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Prompt;
+  color: black;
+}
+
+#title {
+  text-align: center;
+  color: white;
+  font-size: 5vw;
+}
+
+#description {
+  text-align: center;
+  color: white;
+  font-size: 15pt;
+}
+
+#survey-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 7px;
+  flex-basis: 100%;
+  max-width: 50rem;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3em;
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  margin: 3.125rem auto 0 auto;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 15pt;
+  font-weight: 500;
+  margin: var(--margin-size);
+}
+
+input[type=text], input[type=email], input[type=number], #dropdown{
+  font-size: 15pt;
+  border: none;
+  margin: var(--margin-size);
+  padding: 0.3em;
+  outline-color: none;
+  background-color: transparent;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.focus-effect-border {
+  max-width: 100%;
+  background-color: var(--color-underline);
+  height: 1px;
+  margin: var(--margin-size);
+}
+
+#submit {
+  background-color: rgba(0, 0, 0, 1);
+  max-width: 70%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 5rem;
+  width: 20rem;
+  margin: 0 auto auto auto;
+  margin-bottom: 2rem;
+  font-size: 20pt;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  transition: ease-out 0.5s;
+  color: white;
+}
+
+#submit:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#textarea-form {
+  resize: none;
+  margin: 0 3rem 0 3rem;
+}
+
+.form-content-heading {
+  font-size: 15pt;
+  margin: var(--margin-size);
+}
+
+#name:focus + span {
+  background-color: black;
+  height: 2px;
+}
+
+#email:focus + span {
+  background-color: black;
+  height: 2px;
+}
+
+#number:focus + span {
+  background-color: black;
+  height: 2px;
+}
+
+@media (max-width: 600px) {
+  input[type=text], input[type=email], input[type=number], #dropdown {    
+  font-size: 10pt;
+  border: none;
+  margin: var(--margin-size);
+  padding: 0.3em;
+  outline-color: none;
+  background-color: transparent;
+  border: none;
+    }
+  
+  label {
+  display: flex;
+  align-items: center;
+  font-size: 10pt;
+  font-weight: 500;
+  margin: var(--margin-size);
+    }
+}

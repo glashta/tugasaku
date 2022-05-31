@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Musical School Registration</title>
+</head>
+<body>
+    <main id="main">
+        <header>
+          <h1 id="title">Musical School Registration</h1>
+          <p id="description">Please, fill up the form for student registration</p>
+        </header>
+        <div id="form-container">
+        <form id="survey-form">
+          <div class="form-content">
+            <label id="name-label" for="name">Name:</label>
+            <input type="text" id="name" required placeholder="Please input a name">
+            <span class="focus-effect-border" id="first-span"></span>
+          </div>
+          <div class="form-content">
+            <label id="email-label" for="email">Email:</label>
+            <input type="email" id="email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" required placeholder="Please input an email">
+            <span class="focus-effect-border"></span>
+          </div>
+          <div class="form-content">
+            <label id="number-label" for="number">Age:</label>
+            <input type="number" id="number" pattern="\d{5,15}" min=5 max=15 required placeholder="Please input an age">
+            <span class="focus-effect-border"></span>
+              </div>
+          <div class="form-content">
+           <label for="dropdown">Select an Instrument:</label>       
+           <select id="dropdown" placeholder="Please select an instrument" required>
+              <option value="piano">Piano</option>
+              <option value="violin">Violin</option>
+              <option value="guitar">Guitar</option>
+              <option value="drums">Drums</option>
+           </select>
+          </div>
+          <div class="form-content">
+            <p class="form-content-heading">Select Gender: </p>   
+            <label for="boy">     
+            <input type="radio" id="boy" name="gender" value="boy" required>
+              Boy
+            </label>   
+            <label for="girl">
+              <input type="radio" id="girl" name="gender" value="girl">
+              Girl
+            </label>
+          </div>
+          <div class="form-content">
+            <p class="form-content-heading">Additional Informations: </p>
+            <label for="school">
+              <input type="checkbox" value="school">
+              Has been at a music school before
+            </label>    
+            <label for="school">
+            <input type="checkbox" value="instrument">
+              Has ever played on a music instrument
+            </label>        
+            <label for="school">
+              <input type="checkbox" value="sheets">
+              Has ever seen music sheets
+            </label>
+          </div>
+          <div class="form-content">
+            <textarea name="textarea-form" id="textarea-form" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form-content">
+            <input type="submit" id="submit" value="Submit">
+          </div>
+        </form>
+        </div>
+      </main>
+</body>
+</html>
